@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>واژه‌های مهم فارسی نهم | سوسیه همش گوشته</title>
+    <link rel="stylesheet" href="css/vocab.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-controls">
+      <button id="themeToggle" aria-label="تغییر تم">🌙</button>
+      <button id="langToggle" aria-label="تغییر زبان">FA</button>
+    </div>
+
+    <!-- Lock Screen for Vocab Page -->
+    <div id="lock-screen">
+      <div class="meat-bg">
+        <div class="meat-blob meat-blob-1"></div>
+        <div class="meat-blob meat-blob-2"></div>
+        <div class="meat-blob meat-blob-3"></div>
+        <div class="meat-blob meat-blob-4"></div>
+      </div>
+      <div class="lock-card">
+        <svg
+          class="lock-shield"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <h2 data-i18n="enterSite">ورود به واژه‌های فارسی نهم</h2>
+        <p data-i18n="passwordPrompt">
+          لطفاً رمز عبور را وارد کنید تا به داخل صفحه دسترسی پیدا کنید.
+        </p>
+        <div class="input-wrap">
+          <label for="pass" data-i18n="password">رمز عبور</label>
+          <input
+            type="password"
+            id="pass"
+            placeholder="••••••"
+            autocomplete="off"
+          />
+        </div>
+        <div class="error-msg" id="error" data-i18n="wrongPassword">
+          رمز عبور اشتباه است. دوباره تلاش کنید.
+        </div>
+        <button class="btn-unlock" id="unlockBtn" data-i18n="unlock">
+          ورود به صفحه
+        </button>
+        <p
+          style="margin-top: 16px; font-size: 0.85rem; color: var(--text-dim)"
+          data-i18n="enterHint"
+        >
+          کلید Enter هم برای ورود کار می‌کند
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content (hidden until unlocked) -->
+    <div id="app" style="display: none">
+      <nav class="navbar container">
+        <div class="logo">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 2s8 4 8 10v2l-8-4-8 4v-2c0-6 8-10 8-10z"></path>
+            <ellipse cx="12" cy="11" rx="3" ry="2"></ellipse>
+          </svg>
+          سوسیه همش گوشته
+        </div>
+        <button class="back-btn" onclick="location.href = '../index.html'">
+          بازگشت به صفحه اصلی
+        </button>
+      </nav>
+
+      <header>
+        <h1>واژه‌ها و آرایه‌های ادبی فارسی نهم</h1>
+        <p>
+          تمام لغات با معنی و متضاد، و تمامی آرایه‌های ادبی با تعریف و مثال دقیق
+          — داخل سایت، نه بیرون.
+        </p>
+      </header>
+
+      <div class="search-wrap container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="جستجوی واژه، معنی، آرایه Literary..."
+        />
+      </div>
+
+      <div class="mode-tabs container">
+        <button class="mode-btn active" data-mode="vocab">لغات پایه نهم</button>
+        <button class="mode-btn" data-mode="literary">آرایه‌های ادبی</button>
+      </div>
+
+      <section id="vocabSection" class="vocab-section active container">
+        <div id="vocabContent"></div>
+      </section>
+
+      <section id="literarySection" class="vocab-section container">
+        <div id="literaryContent"></div>
+      </section>
+
+      <div class="loading container" id="loading">
+        در حال بارگذاری داده‌ها...
+      </div>
+      <div class="empty container" id="empty">نتیجه‌ای یافت نشد.</div>
+
+      <footer class="container">
+        <p>
+          ساخت با ❤️ و گوشت برای <strong>سوسیه همش گوشته</strong>
+          <span
+            style="
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: #c0392b;
+              box-shadow: 0 0 10px #c0392b;
+              margin: 0 6px;
+            "
+          ></span>
+          واژه‌های فارسی نهم
+        </p>
+      </footer>
+    </div>
+
+    <script src="js/vocab.js"></script>
+  </body>
+</html>

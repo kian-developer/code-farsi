@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سوسیه همش گوشته | سایت شخصی و انیمیشن‌پذیر</title>
+<link rel="stylesheet" href="./src/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="top-controls">
+    <button id="themeToggle" aria-label="تغییر تم"><img src="./src/moon_stars_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+    <button id="langToggle" aria-label="تغییر زبان">FA</button>
+  </div>
+
+  <div id="lock-screen">
+    <div class="meat-bg">
+      <div class="meat-blob meat-blob-1"></div>
+      <div class="meat-blob meat-blob-2"></div>
+      <div class="meat-blob meat-blob-3"></div>
+      <div class="meat-blob meat-blob-4"></div>
+    </div>
+    <div class="lock-card">
+      <svg class="lock-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      </svg>
+      <h2 data-i18n="enterSite">ورود به سوسیه همش گوشته</h2>
+      <p data-i18n="passwordPrompt">لطفاً رمز عبور را وارد کنید تا به داخل سایت دسترسی پیدا کنید.</p>
+      <div class="input-wrap">
+        <label for="pass" data-i18n="password">رمز عبور</label>
+        <input type="password" id="pass" placeholder="••••••" autocomplete="off">
+      </div>
+      <div class="error-msg" id="error" data-i18n="wrongPassword">رمز عبور اشتباه است. دوباره تلاش کنید.</div>
+      <button class="btn-unlock" id="unlockBtn" data-i18n="unlock">ورود به سایت</button>
+      <p style="margin-top:16px; font-size:0.85rem; color:var(--text-dim);" data-i18n="enterHint">کلید Enter هم برای ورود کار می‌کند</p>
+    </div>
+  </div>
+
+  <div id="app" style="display:none">
+    <nav class="container">
+      <div class="logo">
+        <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2s8 4 8 10v2l-8-4-8 4v-2c0-6 8-10 8-10z"></path>
+          <ellipse cx="12" cy="11" rx="3" ry="2"></ellipse>
+        </svg>
+        <span data-i18n="siteTitle">سوسیه همش گوشته</span>
+      </div>
+      <ul class="nav-links">
+        <a href="#home" data-i18n="navHome">صفحه اصلی</a>
+        <a href="#gallery" data-i18n="navGallery">گالری تصاویر</a>
+        <a href="#pdf" data-i18n="navPdf">جزوه آموزشی</a>
+        <a href="./src/vocab.html" class="vocab-link" target="_blank" data-i18n="navVocab">واژه‌های فارسی نهم</a>
+      </ul>
+    </nav>
+
+    <header class="hero reveal" id="home">
+      <h1>به <span class="grad" data-i18n="siteTitle">سوسیه همش گوشته</span> خوش آمدید 🌭</h1>
+      <p data-i18n="heroDesc">سایت شخصی و پر انیمیشن — دو عکس و جزوه <strong>داخل سایت</strong> هستند نه بیرون. طراحی برای دسکتاپ، رنگ گوشت و سوسیس.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="scrollTo('#gallery')" data-i18n="btnGallery">مشاهده تصاویر</button>
+        <button class="btn btn-ghost" onclick="scrollTo('#pdf')" data-i18n="btnPdf">بخوانی جزوه</button>
+      </div>
+    </header>
+
+    <div class="sausage-decoration reveal">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 100 Q 100 20 170 100 Q 100 180 30 100 Z" fill="#e74c3c" stroke="#c0392b" stroke-width="4"/>
+        <circle cx="55" cy="95" r="3" fill="#922b21"/>
+        <circle cx="95" cy="85" r="2.5" fill="#922b21"/>
+        <circle cx="135" cy="105" r="3" fill="#922b21"/>
+        <circle cx="70" cy="115" r="2" fill="#922b21"/>
+        <circle cx="150" cy="90" r="2.5" fill="#922b21"/>
+        <path d="M50 85 Q 80 60 110 85" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+        <text x="100" y="165" text-anchor="middle" font-family="Vazirmatn, sans-serif" font-size="14" font-weight="900" fill="#c0392b" opacity="0.9">سوسیس</text>
+      </svg>
+    </div>
+
+    <section class="section gallery reveal" id="gallery">
+      <div class="container">
+        <h2 class="section-title" data-i18n="galleryTitle">گالری تصاویر</h2>
+        <p class="section-desc" data-i18n="galleryDesc">این دو عکس مستقیماً در کد سایت هستند، لینک خارجی ندارند. کلیک کنید تا بزرگ شود.</p>
+        <div class="gallery-grid">
+          <div class="image-card" data-tilt data-src="image1.png" data-caption="عکس اول">
+            <div class="image-frame">
+              <img src="./src/image1.png" alt="عکس اول" onerror="this.parentNode.innerHTML='<div class=&quot;fallback&quot;><div class=&quot;icon&quot;>🖼️</div><div style=&quot;font-weight:700&quot;>عکس اول</div><div style=&quot;font-size:0.9rem;opacity:0.7&quot;>فایل image1.png پیدا نشد</div></div>'">
+            </div>
+            <div class="caption">
+              <h3 data-i18n="img1Title">عکس اول</h3>
+              <p data-i18n="img1Desc">توضیحات کوتاه در مورد عکس اول اینجا قرار می‌گیرد.</p>
+            </div>
+          </div>
+          <div class="image-card" data-tilt data-src="image2.png" data-caption="عکس دوم">
+            <div class="image-frame">
+              <img src="./src/image2.png" alt="عکس دوم" onerror="this.parentNode.innerHTML='<div class=&quot;fallback&quot;><div class=&quot;icon&quot;>🖼️</div><div style=&quot;font-weight:700&quot;>عکس دوم</div><div style=&quot;font-size:0.9rem;opacity:0.7&quot;>فایل image2.png پیدا نشد</div></div>'">
+            </div>
+            <div class="caption">
+              <h3 data-i18n="img2Title">عکس دوم</h3>
+              <p data-i18n="img2Desc">توضیحات کوتاه در مورد عکس دوم اینجا قرار می‌گیرد.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pdf-section reveal" id="pdf">
+      <div class="container">
+        <h2 class="section-title" data-i18n="pdfTitle">جزوه آموزشی</h2>
+        <p class="section-desc" data-i18n="pdfDesc">فایل جزوه به صورت داخلی در سایت نمایش داده می‌شود.</p>
+        <div class="pdf-card">
+          <div class="pdf-header">
+            <div class="pdf-icon">📄</div>
+            <div class="pdf-info">
+              <h3 data-i18n="pdfCardTitle">جزوه سوسیه همش گوشته</h3>
+              <p data-i18n="pdfCardDesc">محتوای آموزشی داخل سایت، امن و سریع</p>
+            </div>
+          </div>
+          <div class="pdf-view">
+            <embed src="./src/booklet.pdf" type="application/pdf" title="جزوه آموزشی">
+            <div class="pdf-fallback" id="pdfFallback">
+              <span class="icon">📕</span>
+              <div style="font-weight:700;color:#fff;margin-bottom:8px;" data-i18n="pdfMissing">فایل جزوه پیدا نشد</div>
+              <div style="font-size:0.9rem;" data-i18n="pdfMissingDesc">فایل booklet.pdf را کنار index.html بگذارید.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container reveal">
+      <p data-i18n="footer">ساخت با ❤️ و گوشت برای سوسیه همش گوشته — انیمیشن‌پذیر و دسکتاپ‌فوکس</p>
+    </footer>
+  </div>
+
+  <div id="lightbox">
+    <button class="close-lb" id="closeLightbox" data-i18n="close">بستن</button>
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <script src="./src/js/script.js"></script>
+</body>
+</html>
